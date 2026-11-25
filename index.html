@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEON AEGIS // HD Arcade Space Shooter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div class="hud-group">
+        <span class="label">SCORE</span>
+        <span id="scoreVal" class="value">000000</span>
+      </div>
+      <div class="hud-group">
+        <span class="label">WAVE</span>
+        <span id="waveVal" class="value">01</span>
+      </div>
+      <div class="hud-group">
+        <span class="label">MULTIPLIER</span>
+        <span id="multVal" class="value accent">1.0x</span>
+      </div>
+      <div class="hud-group">
+        <span class="label">SHIELD</span>
+        <div class="bar-track"><div id="shieldBar" class="bar-fill"></div></div>
+      </div>
+      <div class="hud-group">
+        <span class="label">OVERDRIVE</span>
+        <div class="bar-track"><div id="overdriveBar" class="bar-fill gold"></div></div>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="overlay" class="overlay visible">
+      <div class="card">
+        <p class="eyebrow">HIGH-DPI CANVAS ARCADE ENGINE</p>
+        <h1 id="overlayTitle">NEON AEGIS</h1>
+        <p id="overlaySub" class="sub">
+          Intercept hostile drones, chain combo multipliers, and unleash Overdrive pulses.
+        </p>
+        <div class="controls-grid">
+          <div><strong>WASD / Arrows</strong><span>Thrusters</span></div>
+          <div><strong>Mouse / Space</strong><span>Aim &amp; Fire</span></div>
+          <div><strong>Shift / Right-Click</strong><span>Overdrive Nova</span></div>
+          <div><strong>P</strong><span>Pause / Resume</span></div>
+        </div>
+        <button id="startBtn" type="button">LAUNCH MISSION</button>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
